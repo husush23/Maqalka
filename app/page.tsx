@@ -5,7 +5,6 @@ import RecentBlogs from '@/components/RecentBlogs';
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main className='text-secondary'>
         <Hero />
         <RecentBlogs />
