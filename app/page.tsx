@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navabar';
+import RecentBlogs from '@/components/RecentBlogs';
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <main className='text-secondary'>
         <Hero />
+        <RecentBlogs />
       </main>
     </>
   );

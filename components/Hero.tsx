@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col items-center justify-center bg-gray-100 py-16'>
+    <div className='flex flex-col items-center justify-center bg-gray-100 py-8 sm:py-16 px-4'>
       <div className='max-w-4xl text-center'>
-        <h1 className='text-4xl text-left font-bold mb-4'>
+        <h1 className='text-2xl sm:text-4xl text-left font-bold mb-4'>
           A mysterious <span className='text-[#f63d68]'>Maqalka</span> blog, you
           can explore recent articles. A simple way to connect the expert
         </h1>
-        <p className='text-lg text-gray-700 leading-relaxed text-left'>
+        <p className='text-base sm:text-lg text-gray-700 leading-relaxed text-left'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde beatae
           veniam a nisi? Cumque tenetur quaerat esse perferendis ipsa obcaecati,
           voluptates magnam iste molestias fugit vel provident reiciendis, nulla
@@ -17,10 +17,10 @@ const Hero = () => {
           Natus assumenda suscipit animi a obcaecati iusto cumque, quisquam
           voluptates ea corporis et?
         </p>
-        <div className='flex gap-4 py-8'>
+        <div className='flex flex-col sm:flex-row gap-4 py-8 items-center'>
           <Link
             href='/'
-            className='flex items-center bg-accent rounded-md px-2'
+            className='flex items-center bg-accent rounded-md px-2 py-2 sm:py-0'
           >
             <Image
               src='/spotify.svg'
@@ -36,13 +36,13 @@ const Hero = () => {
           </Link>
           <Link
             href='/'
-            className='flex items-center px-2 bg-accent rounded-md'
+            className='flex items-center px-2 bg-accent rounded-md py-2 sm:py-0'
           >
             <Image
               src='/apple-podcast.svg'
               height={50}
               width={50}
-              alt='apple posdcast logo'
+              alt='apple podcast logo'
               className='py-2'
             />
             <div className='flex flex-col text-left p-2'>
