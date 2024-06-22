@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
@@ -17,7 +18,8 @@ const Navbar = () => {
         <div className='flex items-center justify-between h-16'>
           <div className='flex items-center'>
             {/* Logo */}
-            <img src='/logo.svg' className='h-8 w-auto' alt='Logo' />
+            <Image src='/logo.png' width="160" height="30" className='' alt='Logo' />
+            {/* <img src='/logo.svg' className='h-8 w-auto' alt='Logo' /> */}
             <div className='hidden md:block'>
               <ul className='ml-10 flex items-baseline space-x-4'>
                 <li>
