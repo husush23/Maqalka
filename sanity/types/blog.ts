@@ -16,4 +16,5 @@ export interface Blog {
     name: string;
   };
   publishedAt: string;
+  excerpt: string
 }
