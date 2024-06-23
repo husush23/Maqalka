@@ -2,30 +2,6 @@ import Link from 'next/link';
 import {getBlogs} from '@/sanity/lib/fetchBlogs';
 
 const RecentBlogs = async () => {
-  // const blogs = [
-  //   {
-  //     id: 1,
-  //     title: 'Exploring the Mysteries of the Universe',
-  //     excerpt:
-  //       'Discover the secrets of the cosmos and what lies beyond our galaxy...',
-  //     image: '/blogs/blog1.jpg',
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'The Future of Artificial Intelligence',
-  //     excerpt:
-  //       'A deep dive into AI and how it will shape our world in the coming years...',
-  //     image: '/blogs/blog2.jpg',
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'A Guide to Sustainable Living',
-  //     excerpt:
-  //       'Learn how to live a sustainable lifestyle with these simple tips...',
-  //     image: '/blogs/blog3.jpg',
-  //   },
-  // ];
-
   const blogs = await getBlogs();
   const recentBlogs = blogs.slice(0, 3);
 

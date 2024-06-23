@@ -6,7 +6,7 @@ const About = () => {
           <h1 className='text-3xl text-[#f63d68] font-bold mb-4'>About Us</h1>
           <p className='text-gray-100 leading-relaxed mb-6'>
             Welcome to Maqalak, your number one source for all things related to
-            [your blog topic]. We're dedicated to giving you the very best of
+            [your blog topic]. We are dedicated to giving you the very best of
             [blog topic], with a focus on [three characteristics, e.g.,
             dependability, customer service, and uniqueness].
           </p>
@@ -16,14 +16,14 @@ const About = () => {
             first started out, [his/her/their] passion for [passion for the blog
             topic] drove them to [action: quit day job, do tons of research,
             etc.] so that Maqalak can offer you [competitive differentiator: the
-            world's most advanced toothbrush]. We now serve customers all over
+            worlds most advanced toothbrush]. We now serve customers all over
             [place: the US, the world, the Austin area], and are thrilled that
-            we're able to turn our passion into our own website.
+            we are able to turn our passion into our own website.
           </p>
           <p className='text-gray-100 leading-relaxed mb-6'>
             We hope you enjoy our products as much as we enjoy offering them to
-            you. If you have any questions or comments, please don't hesitate to
-            contact us.
+            you. If you have any questions or comments, please do not hesitate
+            to contact us.
           </p>
           <p className='text-gray-100 leading-relaxed mb-6'>
             Sincerely,

@@ -55,7 +55,7 @@ const Contact = () => {
                 <textarea
                   name='message'
                   id='message'
-                  rows='4'
+                  rows={4}
                   className='block w-full bg-gray-700 border-gray-600 text-gray-100 rounded-md shadow-sm focus:border-accent focus:ring focus:ring-accent focus:ring-opacity-50 indent-3'
                   placeholder='Your message'
                 ></textarea>
