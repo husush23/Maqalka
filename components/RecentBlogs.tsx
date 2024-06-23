@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getBlogs } from '@/sanity/lib/fetchBlogs';
+import {getBlogs} from '@/sanity/lib/fetchBlogs';
 
 const RecentBlogs = async () => {
   // const blogs = [
@@ -26,8 +26,8 @@ const RecentBlogs = async () => {
   //   },
   // ];
 
-  const blogs = await getBlogs()
-  const recentBlogs = blogs.slice(0,3)
+  const blogs = await getBlogs();
+  const recentBlogs = blogs.slice(0, 3);
 
   return (
     <section className='py-8 sm:py-16 bg-primary'>
@@ -49,7 +49,10 @@ const RecentBlogs = async () => {
               <div className='p-6'>
                 <h3 className='text-lg font-semibold mb-2'>{blog.title}</h3>
                 <p className='text-gray-700 text-sm mb-4'>{blog.excerpt}</p>
-                <Link href={`/blog/${blog.slug.current}`} className='hover:underline'>
+                <Link
+                  href={`/blogs/${blog.slug.current}`}
+                  className='hover:underline'
+                >
                   Read more
                 </Link>
               </div>

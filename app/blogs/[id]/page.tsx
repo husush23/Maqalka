@@ -2,9 +2,8 @@ import Link from 'next/link';
 import {PortableText} from '@portabletext/react';
 import {getBlog} from '@/sanity/lib/fetchBlogs';
 
-const BlogDetails = async ({params}) => {
+const BlogDetails = async ({params}: {params: {id: string}}) => {
   const blog = await getBlog(params.id);
-  console.log(blog._createdAt);
 
   if (!blog) {
     return <p className='text-secondary'>Blog not found.</p>;
@@ -22,12 +21,20 @@ const BlogDetails = async ({params}) => {
             />
           )}
           <div className='p-6'>
+            {blog.publishedAt && (
+              <p className='text-gray-300 mb-6'>
+                Published on: {new Date(blog.publishedAt).toDateString()}
+              </p>
+            )}
+            {blog.author.name && (
+              <p className='text-gray-300 mb-6'>
+                Published by: {blog.author.name}
+              </p>
+            )}
             <h1 className='text-3xl font-bold text-secondary mb-4'>
               {blog.title}
             </h1>
-            <p className='text-gray-300 mb-6'>
-              Published on: {new Date(blog._createdAt).toDateString()}
-            </p>
+
             <div className='text-gray-100 leading-relaxed mb-6'>
               <PortableText value={blog.body} />
             </div>

@@ -12,7 +12,11 @@ const allBlogsQuery = `*[_type == "post"] | order(_createdAt desc) {
       _id,
       url
     }
-  }
+  },
+  author->{
+    name
+  },
+  publishedAt
 }`;
 
 // Function to fetch a single blog by slug
@@ -27,7 +31,11 @@ const singleBlogQuery = `*[slug.current == $slug] {
       url
     },
     alt
-  }
+  },
+  author->{
+    name
+  },
+  publishedAt
 }[0]`;
 
 // Function to create an excerpt from rich text body
