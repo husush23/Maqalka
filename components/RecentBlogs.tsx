@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import {getBlogs} from '@/sanity/lib/fetchBlogs';
 
+export const revalidate = 0;
+
 const RecentBlogs = async () => {
   const blogs = await getBlogs();
   const recentBlogs = blogs.slice(0, 3);
@@ -15,7 +17,7 @@ const RecentBlogs = async () => {
           {recentBlogs.map(blog => (
             <div
               key={blog._id}
-              className='bg-accent rounded-lg shadow-md overflow-hidden text-secondary'
+              className='bg-accent rounded-lg shadow-md overflow-hidden'
             >
               <img
                 src={blog.mainImage.asset.url}
@@ -27,7 +29,7 @@ const RecentBlogs = async () => {
                 <p className='text-gray-700 text-sm mb-4'>{blog.excerpt}</p>
                 <Link
                   href={`/blogs/${blog.slug.current}`}
-                  className='hover:underline'
+                  className='text-red-400 hover:underline'
                 >
                   Read more
                 </Link>

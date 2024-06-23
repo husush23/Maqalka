@@ -2,7 +2,7 @@ import {client} from '@/sanity/lib/client';
 import {Blog} from '../types/blog';
 import {toPlainText} from '@portabletext/react';
 
-const allBlogsQuery = `*[_type == "post"] | order(_createdAt desc) {
+const allBlogsQuery = `*[_type == "post"] | order(publishedAt desc) {
   _id,
   title,
   slug,
