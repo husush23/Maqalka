@@ -5,31 +5,36 @@ const About = () => {
         <div className='bg-accent rounded-lg shadow-md p-6'>
           <h1 className='text-3xl text-[#f63d68] font-bold mb-4'>About Us</h1>
           <p className='text-gray-100 leading-relaxed mb-6'>
-            Welcome to Maqalak, your number one source for all things related to
-            [your blog topic]. We are dedicated to giving you the very best of
-            [blog topic], with a focus on [three characteristics, e.g.,
-            dependability, customer service, and uniqueness].
+
+          Kadib in badan oo bahda Maqalka ay indha-indhayn ku wadday baraha bulshada Soomaalida,waxaa inoo caddaatay in ay ma huraan tahay in la helo madal qofka xiiseeya xogaha quseeya Siyaasadda,Taariikhda iyo Technolgy-da uu si fudud uga aqrisan karo,waliba xog ku qoran Af-Soomaali.
           </p>
           <p className='text-gray-100 leading-relaxed mb-6'>
-            Founded in [year] by [founder name], Maqalak has come a long way
-            from its beginnings in [starting location]. When [founder name]
-            first started out, [his/her/their] passion for [passion for the blog
-            topic] drove them to [action: quit day job, do tons of research,
-            etc.] so that Maqalak can offer you [competitive differentiator: the
-            worlds most advanced toothbrush]. We now serve customers all over
-            [place: the US, the world, the Austin area], and are thrilled that
-            we are able to turn our passion into our own website.
+
+        23-ki febraayo 2021,waxaa hawada si toos ah usoo galay fikrad in badan khiyaal ahayd,waa Maqalka bulshada.
+
+        Is badallo aan ku samaynay iyo adeegyo aan soo kordhinnay darteeda,magaca si uu u noqdo mid fudud,ujeeddo cadna u taagan waxaan ku soo koobnay kaliya Maqalka.
           </p>
           <p className='text-gray-100 leading-relaxed mb-6'>
-            We hope you enjoy our products as much as we enjoy offering them to
-            you. If you have any questions or comments, please do not hesitate
-            to contact us.
+
+        Qodobada aynu diiradda saarno waxaa jira sababo cayiman oo aynu u doorannay,waxaa ka mid ah;
+        Taariikhda;kaliya maaha ogaalka wixii na 
+        dhaafay sidoo kale waxaa loo adeegsan karaa,in lagu taxliiliyo waxa nagu soo fool leh.
+        Nolosha marar badan waxay soo celcelisaa    dhawr bog oo isku mid ah waqtiyo isku dhaw,si aynu u noqono dad fursad iyo wacyi ahaanba u diyaarsan taariikhda boos wayn ayay noogu jirtaa.
           </p>
           <p className='text-gray-100 leading-relaxed mb-6'>
-            Sincerely,
-            <br />
-            [Founder Name]
+
+        Siyaasadda;siyaasadda waa maamulka nolosha oo dhan,siyaasadda kaliya kuma koobna xafiisyada dawladda iyo inta yaree ka agdhaw,siyaasadda waa hab hoggaamin,waa jajabinta waxyaabo waa-wayn si looga soo saaro natiijo fudud oo qurux badan.
           </p>
+          <p className='text-gray-100 leading-relaxed mb-6'>
+
+        Technology-dda; casriga shaashadaha,casriga hawl fududeeska,casriga hormarka caqliga macmalka ah,waqtiga ugu haboon ee qof noolaan lahaa,dabcan haa qof walba waayihiisii ayuu ammaanaa oo la qurxoon laakiin hubaal waa qofkee qofka aan xiiso innaba u qaadi karin inuu ogaado sida aaladahan u shaqeeyaan.
+
+        Mar kale ku soo dhawaada saaxibayaal madashiinna,hubaal waad jeclaan doontaan la joogeenna.
+          </p>
+        <p className='text-gray-100 leading-relaxed mb-6'>
+
+        Aqris wacan dhalinyaro!
+        </p>
         </div>
       </div>
     </section>

@@ -19,21 +19,23 @@ const RecentBlogs = async () => {
               key={blog._id}
               className='bg-accent rounded-lg shadow-md overflow-hidden'
             >
+              <Link href={`/blogs/${blog.slug.current}`}>
               <img
                 src={blog.mainImage.asset.url}
                 alt={blog.title}
                 className='w-full h-48 object-cover'
-              />
+                />
               <div className='p-6'>
                 <h3 className='text-lg font-semibold mb-2'>{blog.title}</h3>
                 <p className='text-gray-700 text-sm mb-4'>{blog.excerpt}</p>
                 <Link
                   href={`/blogs/${blog.slug.current}`}
                   className='text-red-400 hover:underline'
-                >
+                  >
                   Read more
                 </Link>
               </div>
+              </Link>
             </div>
           ))}
         </div>
