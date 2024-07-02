@@ -1,3 +1,8 @@
+import {Metadata} from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
 const Contact = () => {
   return (
     <section className='py-8 sm:py-16 bg-primary text-secondary'>
