@@ -1,6 +1,27 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {PortableText} from '@portabletext/react';
-import {getBlog} from '@/sanity/lib/fetchBlogs';
+import {getBlog, getBlogs} from '@/sanity/lib/fetchBlogs';
+import {Blog} from '@/sanity/types/blog';
+
+// All params
+export const generateStaticParams = async () => {
+  const blogs = await getBlogs();
+  return blogs.map(blog => ({
+    slug: blog.slug.current,
+  }));
+};
+
+export async function generateMetadata({params}: {params: {id: string}}) {
+  const blog = await getBlog(params.id);
+  return {
+    title: blog.title,
+    description: <PortableText value={blog.body} />,
+    openGraph: {
+      images: [{url: blog.mainImage.asset.url}],
+    },
+  };
+}
 
 const BlogDetails = async ({params}: {params: {id: string}}) => {
   const blog = await getBlog(params.id);
@@ -14,11 +35,17 @@ const BlogDetails = async ({params}: {params: {id: string}}) => {
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='bg-accent rounded-lg shadow-md overflow-hidden'>
           {blog.mainImage?.asset?.url && (
-            <img
-              src={blog.mainImage.asset.url}
-              alt={blog.mainImage.alt || blog.title}
-              className='w-full h-64 sm:h-96 object-cover'
-            />
+            <div className='relative w-full h-64 sm:h-96'>
+              <Image
+                src={blog.mainImage.asset.url}
+                alt={blog.mainImage.alt || blog.title}
+                layout='fill'
+                objectFit='cover'
+                sizes='(max-width: 768px) 100vw, 
+                      (max-width: 1200px) 50vw, 
+                      33vw'
+              />
+            </div>
           )}
           <div className='p-6'>
             {blog.publishedAt && (
