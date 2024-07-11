@@ -2,14 +2,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {getBlogs} from '@/sanity/lib/fetchBlogs';
 
-export async function generateMetadata() {
+export const generateStaticParams = async () => {
   const blogs = await getBlogs();
-  const recentBlogs = blogs.slice(0, 3);
-}
+  return blogs.map(blog => ({
+    slug: blog.slug.current,
+  }));
+};
+
+export const revalidate = 0;
 
 const RecentBlogs = async () => {
   const blogs = await getBlogs();
-  const recentBlogs = blogs.slice(0, 3);
+  const recentBlogs = blogs.slice(0, 6);
 
   return (
     <section className='py-8 sm:py-16 bg-primary'>

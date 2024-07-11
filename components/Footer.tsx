@@ -27,19 +27,22 @@ const Footer = () => {
           </div>
           <div className='flex space-x-4'>
             <Link
-              href='https://twitter.com'
+              href='#'
+              target='_blank'
               className='text-gray-100 hover:text-red-400'
             >
               <FontAwesomeIcon icon={faTwitter} />
             </Link>
             <Link
-              href='https://youtube.com'
+              href='https://www.youtube.com/@maqalka?si=1M-_v0BikPOkSmFt'
+              target='_blank'
               className='text-gray-100 hover:text-red-400'
             >
               <FontAwesomeIcon icon={faYoutube} />
             </Link>
             <Link
-              href='https://facebook.com'
+              href='https://www.facebook.com/maqalkabulshada?mibextid=ZbWKwL'
+              target='_blank'
               className='text-gray-100 hover:text-red-400'
             >
               <FontAwesomeIcon icon={faFacebook} />
