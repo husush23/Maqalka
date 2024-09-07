@@ -12,7 +12,7 @@ const Blogs = async () => {
   const blogs = await getBlogs();
 
   return (
-    <section className='py-8 sm:py-16 bg-primary'>
+    <section className='py-8 sm:py-16 bg-primary' style={{color:'#fff'}}>
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
         <h2 className='text-2xl sm:text-3xl font-bold text-secondary mb-6'>
           Recent Blogs
