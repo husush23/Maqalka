@@ -8,8 +8,8 @@ const inter = Inter({subsets: ['latin']});
 
 export const metadata: Metadata = {
   title: {
-    default: 'Maqalka blog',
-    template: '%s - Maqalka blog',
+    default: 'Maqalka',
+    template: '%s - Maqalka',
   },
   description:
     '  Xaqiijinta xogta dhagahaaga soo gaarta, shaandayn iyo kala saarid!',
@@ -25,10 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-        <head>
-        <meta name="theme-color" content="#0e1226" />
+            <head>
+        <meta name="theme-color" content="#0e1226" /> {/* Add theme-color */}
       </head>
-      <body className={`${inter.className} bg-primary`}>
+      <body className={`${inter.className} bg-primary text-secondary`}>
         <Navbar />
         {children}
         <Footer />
