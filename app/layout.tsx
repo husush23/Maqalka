@@ -25,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+        <head>
+        <meta name="theme-color" content="#0e1226" />
+      </head>
       <body className={`${inter.className} bg-primary`}>
         <Navbar />
         {children}
